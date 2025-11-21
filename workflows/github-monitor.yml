@@ -1,0 +1,178 @@
+name: GitHub Activity Monitor
+on:
+  # Monitor GitHub repositories for new activity
+  script:
+    config:
+      # Check every hour
+      every: 60
+    run: |
+      const axios = require('axios');
+
+      // Repositories to monitor (customize these!)
+      const repos = [
+        'anthropics/anthropic-sdk-python',
+        'pytorch/pytorch',
+        'kubernetes/kubernetes'
+      ];
+
+      const githubToken = process.env.GITHUB_TOKEN;
+      const headers = githubToken
+        ? { 'Authorization': `token ${githubToken}` }
+        : {};
+
+      let activities = [];
+
+      for (const repo of repos) {
+        try {
+          // Get recent issues
+          const issuesUrl = `https://api.github.com/repos/${repo}/issues?state=open&sort=created&per_page=5`;
+          const issuesResponse = await helpers.axios.get(issuesUrl, { headers });
+
+          for (const issue of issuesResponse.data) {
+            // Only include items from the last hour
+            const createdAt = new Date(issue.created_at);
+            const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000);
+
+            if (createdAt > oneHourAgo && !issue.pull_request) {
+              activities.push({
+                type: 'issue',
+                repo: repo,
+                title: issue.title,
+                url: issue.html_url,
+                author: issue.user.login,
+                created_at: issue.created_at
+              });
+            }
+          }
+
+          // Get recent pull requests
+          const prsUrl = `https://api.github.com/repos/${repo}/pulls?state=open&sort=created&per_page=5`;
+          const prsResponse = await helpers.axios.get(prsUrl, { headers });
+
+          for (const pr of prsResponse.data) {
+            const createdAt = new Date(pr.created_at);
+            const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000);
+
+            if (createdAt > oneHourAgo) {
+              activities.push({
+                type: 'pull_request',
+                repo: repo,
+                title: pr.title,
+                url: pr.html_url,
+                author: pr.user.login,
+                created_at: pr.created_at
+              });
+            }
+          }
+
+          // Get recent releases
+          const releasesUrl = `https://api.github.com/repos/${repo}/releases?per_page=3`;
+          const releasesResponse = await helpers.axios.get(releasesUrl, { headers });
+
+          for (const release of releasesResponse.data) {
+            const publishedAt = new Date(release.published_at);
+            const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
+
+            if (publishedAt > oneDayAgo) {
+              activities.push({
+                type: 'release',
+                repo: repo,
+                title: release.name || release.tag_name,
+                url: release.html_url,
+                author: release.author.login,
+                created_at: release.published_at
+              });
+            }
+          }
+
+        } catch (error) {
+          console.log(`Error fetching ${repo}:`, error.message);
+        }
+      }
+
+      // Only return if there are new activities
+      if (activities.length > 0) {
+        return [{
+          count: activities.length,
+          activities: activities,
+          timestamp: new Date().toISOString()
+        }];
+      }
+
+      return [];
+
+jobs:
+  notify-activity:
+    name: Notify GitHub Activity
+    runs-on: ubuntu-latest
+    if: ${{ on.script.outputs.count > 0 }}
+    steps:
+      - name: Send Slack notification
+        if: env.SLACK_WEBHOOK_URL != ''
+        run: |
+          # Format activities as Slack blocks
+          cat << 'EOF' > slack-payload.json
+          {
+            "text": "🔔 New GitHub Activity (${{ on.script.outputs.count }} items)",
+            "blocks": [
+              {
+                "type": "header",
+                "text": {
+                  "type": "plain_text",
+                  "text": "🔔 GitHub Activity Alert"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "Found ${{ on.script.outputs.count }} new activities in monitored repositories"
+                }
+              },
+              {
+                "type": "divider"
+              }
+            ]
+          }
+          EOF
+
+          curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
+            -H 'Content-Type: application/json' \
+            -d @slack-payload.json
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Send email summary
+        if: env.EMAIL_USERNAME != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.EMAIL_SMTP_HOST }}
+          server_port: ${{ secrets.EMAIL_SMTP_PORT }}
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "GitHub Activity: ${{ on.script.outputs.count }} new items"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: |
+            GitHub Activity Summary
+
+            Found ${{ on.script.outputs.count }} new activities in monitored repositories.
+
+            Check your Slack or GitHub for details.
+        env:
+          EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+
+      - name: Create activity log file
+        run: |
+          mkdir -p activity-logs
+          echo "GitHub Activity - $(date)" > activity-logs/latest.txt
+          echo "Found ${{ on.script.outputs.count }} new activities" >> activity-logs/latest.txt
+          echo "" >> activity-logs/latest.txt
+          echo "Timestamp: ${{ on.script.outputs.timestamp }}" >> activity-logs/latest.txt
+
+      - name: Upload activity log
+        uses: actions/upload-artifact@v3
+        with:
+          name: github-activity-log
+          path: activity-logs/latest.txt
+          retention-days: 7

@@ -1,0 +1,19 @@
+{
+  "name": "actionsflow-automation",
+  "version": "1.0.0",
+  "description": "Personal automation workflows using Actionsflow - weather, news, GitHub monitoring, and Slack integration",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremyeder/actionsflow-automation.git"
+  },
+  "author": "Jeremy Eder",
+  "license": "MIT",
+  "scripts": {
+    "build": "actionsflow build",
+    "start": "actionsflow start",
+    "clean": "actionsflow clean"
+  },
+  "dependencies": {
+    "actionsflow": "^1.12.1"
+  }
+}

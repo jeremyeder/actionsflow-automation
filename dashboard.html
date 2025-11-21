@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actionsflow Automation Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .workflows {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .workflow-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 24px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .workflow-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .workflow-card h3 {
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+
+        .workflow-card p {
+            color: #666;
+            margin-bottom: 16px;
+            font-size: 0.95em;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-right: 8px;
+        }
+
+        .badge.manual {
+            background: #ffc107;
+        }
+
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 10px;
+            margin-right: 10px;
+            font-size: 0.9em;
+            transition: background 0.2s;
+        }
+
+        .button:hover {
+            background: #5568d3;
+        }
+
+        .button.secondary {
+            background: #6c757d;
+        }
+
+        .button.secondary:hover {
+            background: #5a6268;
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .quick-link {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .quick-link:hover {
+            transform: scale(1.05);
+        }
+
+        .quick-link .icon {
+            font-size: 2em;
+            margin-bottom: 8px;
+        }
+
+        .status-badge {
+            margin-top: 12px;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #0066cc;
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .info-box h4 {
+            color: #0066cc;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 24px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Actionsflow Automation</h1>
+            <p>Your Personal Automation Hub</p>
+        </header>
+
+        <div class="content">
+            <!-- Quick Links Section -->
+            <div class="section">
+                <h2>📊 Quick Links</h2>
+                <div class="quick-links">
+                    <a href="https://github.com/jeremyeder/actionsflow-automation/actions" class="quick-link" target="_blank">
+                        <div class="icon">▶️</div>
+                        <div>View Workflow Runs</div>
+                    </a>
+                    <a href="https://github.com/jeremyeder/actionsflow-automation/settings/secrets/actions" class="quick-link" target="_blank">
+                        <div class="icon">🔐</div>
+                        <div>Manage Secrets</div>
+                    </a>
+                    <a href="https://github.com/jeremyeder/actionsflow-automation/tree/main/workflows" class="quick-link" target="_blank">
+                        <div class="icon">📝</div>
+                        <div>Edit Workflows</div>
+                    </a>
+                    <a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/docs/QUICKSTART.md" class="quick-link" target="_blank">
+                        <div class="icon">📖</div>
+                        <div>Documentation</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Workflows Section -->
+            <div class="section">
+                <h2>⚡ Active Workflows</h2>
+
+                <div class="workflows">
+                    <!-- Morning Digest -->
+                    <div class="workflow-card">
+                        <h3>🌅 Morning Digest</h3>
+                        <p>Daily email with weather, top Reddit posts, and Hacker News stories.</p>
+                        <div>
+                            <span class="badge">Daily 7 AM ET</span>
+                        </div>
+                        <div class="status-badge">
+                            <img src="https://github.com/jeremyeder/actionsflow-automation/workflows/Actionsflow/badge.svg" alt="Status">
+                        </div>
+                        <a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/workflows/morning-digest.yml" class="button">View Code</a>
+                        <a href="https://github.com/jeremyeder/actionsflow-automation/actions/workflows/actionsflow.yml" class="button secondary">Run Now</a>
+                    </div>
+
+                    <!-- GitHub Monitor -->
+                    <div class="workflow-card">
+                        <h3>👁️ GitHub Monitor</h3>
+                        <p>Track issues, PRs, and releases from your favorite repositories.</p>
+                        <div>
+                            <span class="badge">Hourly</span>
+                        </div>
+                        <div class="status-badge">
+                            <img src="https://github.com/jeremyeder/actionsflow-automation/workflows/Actionsflow/badge.svg" alt="Status">
+                        </div>
+                        <a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/workflows/github-monitor.yml" class="button">View Code</a>
+                        <a href="https://github.com/jeremyeder/actionsflow-automation/actions/workflows/actionsflow.yml" class="button secondary">Run Now</a>
+                    </div>
+
+                    <!-- Slack Trigger -->
+                    <div class="workflow-card">
+                        <h3>💬 Slack Commands</h3>
+                        <p>Trigger workflows directly from Slack using webhook integration.</p>
+                        <div>
+                            <span class="badge manual">On-Demand</span>
+                        </div>
+                        <div class="status-badge">
+                            <img src="https://github.com/jeremyeder/actionsflow-automation/workflows/Actionsflow/badge.svg" alt="Status">
+                        </div>
+                        <a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/workflows/slack-trigger.yml" class="button">View Code</a>
+                        <a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/docs/SLACK-INTEGRATION.md" class="button secondary">Setup Guide</a>
+                    </div>
+
+                    <!-- Emergency Alert -->
+                    <div class="workflow-card">
+                        <h3>🚨 Emergency Alert</h3>
+                        <p>Multi-channel alert demo: email, SMS, Slack, and file logging.</p>
+                        <div>
+                            <span class="badge manual">Manual Only</span>
+                        </div>
+                        <div class="status-badge">
+                            <img src="https://github.com/jeremyeder/actionsflow-automation/workflows/Actionsflow/badge.svg" alt="Status">
+                        </div>
+                        <a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/workflows/emergency-alert.yml" class="button">View Code</a>
+                        <a href="https://github.com/jeremyeder/actionsflow-automation/actions/workflows/actionsflow.yml" class="button secondary">Test Alert</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Getting Started -->
+            <div class="section">
+                <h2>🎯 Getting Started</h2>
+
+                <div class="info-box">
+                    <h4>First Time Setup</h4>
+                    <p>1. Configure API keys in <a href="https://github.com/jeremyeder/actionsflow-automation/settings/secrets/actions" target="_blank">GitHub Secrets</a></p>
+                    <p>2. Review the <a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/docs/SECRETS-SETUP.md" target="_blank">Secrets Setup Guide</a></p>
+                    <p>3. Test a workflow with the <a href="https://github.com/jeremyeder/actionsflow-automation/actions/workflows/actionsflow.yml" target="_blank">manual trigger</a></p>
+                </div>
+
+                <div class="info-box" style="background: #fff3cd; border-left-color: #ffc107;">
+                    <h4>🎓 Quick Resources</h4>
+                    <p><a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/docs/QUICKSTART.md" target="_blank">Quick Start Guide</a> - Add your first workflow in 5 minutes</p>
+                    <p><a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/docs/WORKFLOW-TEMPLATES.md" target="_blank">Workflow Templates</a> - Copy-paste templates for common tasks</p>
+                    <p><a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/docs/TROUBLESHOOTING.md" target="_blank">Troubleshooting</a> - Common issues and solutions</p>
+                </div>
+            </div>
+
+            <!-- Add New Workflow -->
+            <div class="section">
+                <h2>➕ Add New Workflow</h2>
+                <p>Create a new file in the <code>workflows/</code> directory:</p>
+                <ol style="margin-left: 20px; margin-top: 12px;">
+                    <li>Go to <a href="https://github.com/jeremyeder/actionsflow-automation/tree/main/workflows" target="_blank">workflows directory</a></li>
+                    <li>Click "Add file" → "Create new file"</li>
+                    <li>Name it <code>my-workflow.yml</code></li>
+                    <li>Paste a template from <a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/docs/WORKFLOW-TEMPLATES.md" target="_blank">Workflow Templates</a></li>
+                    <li>Commit - it runs automatically!</li>
+                </ol>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built with ❤️ using <a href="https://github.com/actionsflow/actionsflow" target="_blank">Actionsflow</a></p>
+            <p><a href="https://github.com/jeremyeder/actionsflow-automation" target="_blank">View on GitHub</a> | <a href="https://github.com/jeremyeder/actionsflow-automation/blob/main/README.md" target="_blank">Documentation</a></p>
+        </footer>
+    </div>
+</body>
+</html>

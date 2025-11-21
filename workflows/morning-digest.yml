@@ -1,0 +1,165 @@
+name: Morning Digest
+on:
+  # Weather + News + Reddit aggregation
+  script:
+    config:
+      # Run daily at 7 AM Eastern Time
+      every: "0 7 * * *"
+      timeZone: "America/New_York"
+    run: |
+      const axios = require('axios');
+
+      // Fetch weather
+      const weatherApiKey = process.env.OPENWEATHER_API_KEY;
+      const city = process.env.OPENWEATHER_CITY || 'Boston';
+      const units = process.env.OPENWEATHER_UNITS || 'imperial';
+
+      let weatherData = {};
+      if (weatherApiKey) {
+        const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${weatherApiKey}`;
+        const weatherResponse = await helpers.axios.get(weatherUrl);
+        weatherData = {
+          temp: Math.round(weatherResponse.data.main.temp),
+          feels_like: Math.round(weatherResponse.data.main.feels_like),
+          description: weatherResponse.data.weather[0].description,
+          humidity: weatherResponse.data.main.humidity,
+          wind_speed: Math.round(weatherResponse.data.wind.speed),
+          city: city
+        };
+      }
+
+      // Fetch top Reddit posts from multiple subreddits
+      const subreddits = ['technology', 'programming', 'news'];
+      let redditPosts = [];
+
+      for (const sub of subreddits) {
+        try {
+          const redditUrl = `https://www.reddit.com/r/${sub}/top.json?limit=3&t=day`;
+          const redditResponse = await helpers.axios.get(redditUrl, {
+            headers: { 'User-Agent': 'Actionsflow-Bot/1.0' }
+          });
+
+          const posts = redditResponse.data.data.children.map(post => ({
+            title: post.data.title,
+            url: `https://reddit.com${post.data.permalink}`,
+            subreddit: sub,
+            score: post.data.score
+          }));
+
+          redditPosts = redditPosts.concat(posts);
+        } catch (error) {
+          console.log(`Error fetching r/${sub}:`, error.message);
+        }
+      }
+
+      // Fetch HackerNews top stories via RSS
+      let hnStories = [];
+      try {
+        const hnRss = await helpers.rssParser.parseURL('https://hnrss.org/newest?points=100');
+        hnStories = hnRss.items.slice(0, 5).map(item => ({
+          title: item.title,
+          url: item.link
+        }));
+      } catch (error) {
+        console.log('Error fetching HN:', error.message);
+      }
+
+      return [{
+        date: new Date().toLocaleDateString('en-US', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }),
+        weather: weatherData,
+        reddit: redditPosts,
+        hackernews: hnStories
+      }];
+
+jobs:
+  send-digest:
+    name: Send Morning Digest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Format digest email
+        id: format
+        run: |
+          cat << 'EOF' > digest.html
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <style>
+              body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+              h1 { color: #333; border-bottom: 3px solid #0066cc; padding-bottom: 10px; }
+              h2 { color: #0066cc; margin-top: 30px; }
+              .weather { background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 15px 0; }
+              .post { margin: 15px 0; padding: 10px; border-left: 3px solid #0066cc; }
+              .post-title { font-weight: bold; color: #333; }
+              .post-meta { color: #666; font-size: 0.9em; }
+              a { color: #0066cc; text-decoration: none; }
+              a:hover { text-decoration: underline; }
+            </style>
+          </head>
+          <body>
+            <h1>🌅 Morning Digest - ${{ on.script.outputs.date }}</h1>
+
+            <h2>☀️ Weather in ${{ on.script.outputs.weather.city }}</h2>
+            <div class="weather">
+              <p><strong>Temperature:</strong> ${{ on.script.outputs.weather.temp }}°F (feels like ${{ on.script.outputs.weather.feels_like }}°F)</p>
+              <p><strong>Conditions:</strong> ${{ on.script.outputs.weather.description }}</p>
+              <p><strong>Humidity:</strong> ${{ on.script.outputs.weather.humidity }}%</p>
+              <p><strong>Wind:</strong> ${{ on.script.outputs.weather.wind_speed }} mph</p>
+            </div>
+
+            <h2>📰 Top Hacker News</h2>
+            <!-- HN stories would be templated here -->
+
+            <h2>🔥 Trending on Reddit</h2>
+            <!-- Reddit posts would be templated here -->
+
+          </body>
+          </html>
+          EOF
+
+      - name: Send email digest
+        if: env.EMAIL_USERNAME != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.EMAIL_SMTP_HOST }}
+          server_port: ${{ secrets.EMAIL_SMTP_PORT }}
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Morning Digest - ${{ on.script.outputs.date }}"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: file://digest.html
+          html_body: file://digest.html
+        env:
+          EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+
+      - name: Send Slack notification
+        if: env.SLACK_WEBHOOK_URL != ''
+        run: |
+          curl -X POST ${{ secrets.SLACK_WEBHOOK_URL }} \
+            -H 'Content-Type: application/json' \
+            -d '{
+              "text": "☀️ Morning Digest - ${{ on.script.outputs.date }}",
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "🌅 Morning Digest"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Weather in ${{ on.script.outputs.weather.city }}*\n${{ on.script.outputs.weather.temp }}°F - ${{ on.script.outputs.weather.description }}"
+                  }
+                }
+              ]
+            }'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

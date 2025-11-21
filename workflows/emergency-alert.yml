@@ -1,0 +1,158 @@
+name: Emergency Alert Demo
+on:
+  # Example workflow demonstrating ALL output methods
+  # Trigger manually or via webhook for testing
+  script:
+    config:
+      # Manual trigger only (skip automatic schedule)
+      skipSchedule: true
+      # Enable manual run via workflow_dispatch
+      manualRunEvent:
+        - workflow_dispatch
+    run: |
+      // Example: Monitor critical service or condition
+      const criticalCondition = false; // Change to true to test
+
+      if (criticalCondition) {
+        return [{
+          alert_type: 'critical',
+          message: 'CRITICAL: System alert detected!',
+          timestamp: new Date().toISOString(),
+          severity: 'high'
+        }];
+      }
+
+      // For demo purposes, always return test data
+      return [{
+        alert_type: 'test',
+        message: 'This is a test alert showing all notification methods',
+        timestamp: new Date().toISOString(),
+        severity: 'info'
+      }];
+
+jobs:
+  send-all-notifications:
+    name: Send Multi-Channel Alerts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Email Alert
+        if: env.EMAIL_USERNAME != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.EMAIL_SMTP_HOST }}
+          server_port: ${{ secrets.EMAIL_SMTP_PORT }}
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "🚨 Alert: ${{ on.script.outputs.alert_type }}"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: |
+            Alert Type: ${{ on.script.outputs.alert_type }}
+            Message: ${{ on.script.outputs.message }}
+            Timestamp: ${{ on.script.outputs.timestamp }}
+            Severity: ${{ on.script.outputs.severity }}
+        env:
+          EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+
+      - name: Send SMS via Twilio
+        if: env.TWILIO_ACCOUNT_SID != ''
+        run: |
+          curl -X POST "https://api.twilio.com/2010-04-01/Accounts/${{ secrets.TWILIO_ACCOUNT_SID }}/Messages.json" \
+            --data-urlencode "From=${{ secrets.TWILIO_FROM_PHONE }}" \
+            --data-urlencode "To=${{ secrets.TWILIO_TO_PHONE }}" \
+            --data-urlencode "Body=🚨 Alert: ${{ on.script.outputs.message }}" \
+            -u "${{ secrets.TWILIO_ACCOUNT_SID }}:${{ secrets.TWILIO_AUTH_TOKEN }}"
+        env:
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+
+      - name: Send Slack Notification
+        if: env.SLACK_WEBHOOK_URL != ''
+        run: |
+          curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
+            -H 'Content-Type: application/json' \
+            -d '{
+              "text": "🚨 Alert Notification",
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "🚨 Alert: ${{ on.script.outputs.alert_type }}"
+                  }
+                },
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Message:*\n${{ on.script.outputs.message }}"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Severity:*\n${{ on.script.outputs.severity }}"
+                    }
+                  ]
+                },
+                {
+                  "type": "context",
+                  "elements": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "Timestamp: ${{ on.script.outputs.timestamp }}"
+                    }
+                  ]
+                }
+              ]
+            }'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Create Alert Log File
+        run: |
+          mkdir -p alert-logs
+          cat << EOF > alert-logs/alert-$(date +%Y%m%d-%H%M%S).json
+          {
+            "alert_type": "${{ on.script.outputs.alert_type }}",
+            "message": "${{ on.script.outputs.message }}",
+            "timestamp": "${{ on.script.outputs.timestamp }}",
+            "severity": "${{ on.script.outputs.severity }}"
+          }
+          EOF
+
+      - name: Upload Alert Log as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: alert-logs
+          path: alert-logs/
+          retention-days: 30
+
+      - name: Commit Alert Log to Repository (Optional)
+        continue-on-error: true
+        run: |
+          git config user.name "Actionsflow Bot"
+          git config user.email "actionsflow@jeremyeder.com"
+          git add alert-logs/
+          git commit -m "Add alert log: ${{ on.script.outputs.alert_type }}"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create GitHub Issue for Critical Alerts
+        if: on.script.outputs.severity == 'high'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🚨 Critical Alert: ${{ on.script.outputs.alert_type }}',
+              body: `## Alert Details
+
+              - **Type**: ${{ on.script.outputs.alert_type }}
+              - **Message**: ${{ on.script.outputs.message }}
+              - **Timestamp**: ${{ on.script.outputs.timestamp }}
+              - **Severity**: ${{ on.script.outputs.severity }}
+
+              This issue was automatically created by the emergency alert workflow.`,
+              labels: ['alert', 'automated']
+            });

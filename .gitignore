@@ -1,0 +1,27 @@
+# Actionsflow
+.actionsflow
+dist
+cache
+
+# Dependencies
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables (never commit secrets!)
+.env
+.secrets
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~

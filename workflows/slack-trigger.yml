@@ -1,0 +1,64 @@
+name: Slack Command Trigger
+on:
+  # Triggered via GitHub repository_dispatch event from Slack
+  # To trigger: Send POST to https://api.github.com/repos/jeremyeder/actionsflow-automation/dispatches
+  # with event_type: "slack_command" and payload
+  webhook:
+    path: /slack
+    method: post
+
+jobs:
+  handle-slack-command:
+    name: Handle Slack Command
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo command received
+        run: |
+          echo "Received Slack command: ${{ github.event.client_payload.command }}"
+          echo "User: ${{ github.event.client_payload.user_name }}"
+          echo "Channel: ${{ github.event.client_payload.channel_name }}"
+
+      - name: Process command
+        id: process
+        run: |
+          COMMAND="${{ github.event.client_payload.command }}"
+
+          case "$COMMAND" in
+            "status")
+              echo "response=✅ Actionsflow is running! Last check: $(date)" >> $GITHUB_OUTPUT
+              ;;
+            "help")
+              echo "response=Available commands: status, help, trigger-digest" >> $GITHUB_OUTPUT
+              ;;
+            "trigger-digest")
+              echo "response=🚀 Triggering morning digest workflow..." >> $GITHUB_OUTPUT
+              echo "trigger_digest=true" >> $GITHUB_OUTPUT
+              ;;
+            *)
+              echo "response=Unknown command. Try: status, help, or trigger-digest" >> $GITHUB_OUTPUT
+              ;;
+          esac
+
+      - name: Send Slack response
+        if: env.SLACK_WEBHOOK_URL != ''
+        run: |
+          curl -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
+            -H 'Content-Type: application/json' \
+            -d "{
+              \"text\": \"${{ steps.process.outputs.response }}\",
+              \"channel\": \"${{ github.event.client_payload.channel_name }}\"
+            }"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Trigger digest workflow if requested
+        if: steps.process.outputs.trigger_digest == 'true'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'actionsflow.yml',
+              ref: 'main'
+            });
