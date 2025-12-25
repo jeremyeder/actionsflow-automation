@@ -15,6 +15,9 @@ npm-debug.log*
 .env
 .secrets
 
+# Backup files
+*.backup
+
 # OS
 .DS_Store
 Thumbs.db
