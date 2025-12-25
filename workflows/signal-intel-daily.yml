@@ -100,7 +100,7 @@ jobs:
 
           const issue = await createLabeledIssue(
             'jeremyeder',
-            'signal-intel',
+            'actionsflow-automation',
             issueTitle,
             issueBody,
             ['signal-intelligence', 'automated']
@@ -113,7 +113,7 @@ jobs:
             const signal = topSignals[i];
             const commentBody = `## Signal ${i+1}: ${signal.title}\n\n**Source:** ${signal.source}\n\n**URL:** ${signal.url}\n\n**Score:** ${signal.score || 'N/A'}\n\n---\n\n${signal.analysis || 'No analysis available'}`;
 
-            await postComment('jeremyeder', 'signal-intel', issue.number, commentBody);
+            await postComment('jeremyeder', 'actionsflow-automation', issue.number, commentBody);
             console.log(`Posted comment ${i+1}/5`);
           }
           EOF

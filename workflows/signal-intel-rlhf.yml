@@ -14,7 +14,7 @@ on:
 
       const issues = await getIssuesWithLabel(
         'jeremyeder',
-        'signal-intel',
+        'actionsflow-automation',
         'signal-intelligence',
         sevenDaysAgo
       );
@@ -30,7 +30,7 @@ on:
       const issuesWithReactions = [];
 
       for (const issue of issues) {
-        const reactions = await getReactionsForComments('jeremyeder', 'signal-intel', issue.number);
+        const reactions = await getReactionsForComments('jeremyeder', 'actionsflow-automation', issue.number);
 
         if (reactions.length > 0) {
           issuesWithReactions.push({
