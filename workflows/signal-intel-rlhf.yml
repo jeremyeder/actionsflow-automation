@@ -1,0 +1,124 @@
+name: Signal Intelligence RLHF
+on:
+  script:
+    config:
+      every: "0 9 * * 0"  # Sunday 9 AM EST
+      timeZone: "America/New_York"
+    run: |
+      const path = require('path');
+      const { getIssuesWithLabel, getReactionsForComments } = require(path.join(process.cwd(), 'lib/signal-intel/github-utils.js'));
+      const { analyzeReactions } = require(path.join(process.cwd(), 'lib/rlhf/reaction-analyzer.js'));
+
+      // Get issues from past 7 days
+      const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+
+      const issues = await getIssuesWithLabel(
+        'jeremyeder',
+        'signal-intel',
+        'signal-intelligence',
+        sevenDaysAgo
+      );
+
+      console.log(`Found ${issues.length} signal-intelligence issues from past 7 days`);
+
+      if (issues.length === 0) {
+        console.log('No issues to analyze');
+        return [];
+      }
+
+      // Fetch reactions for each issue's comments
+      const issuesWithReactions = [];
+
+      for (const issue of issues) {
+        const reactions = await getReactionsForComments('jeremyeder', 'signal-intel', issue.number);
+
+        if (reactions.length > 0) {
+          issuesWithReactions.push({
+            number: issue.number,
+            title: issue.title,
+            comments: reactions
+          });
+        }
+      }
+
+      console.log(`Found ${issuesWithReactions.length} issues with reactions`);
+
+      if (issuesWithReactions.length === 0) {
+        console.log('No reactions to analyze');
+        return [];
+      }
+
+      // Analyze reactions
+      const preferences = analyzeReactions(issuesWithReactions);
+
+      return [{
+        issuesAnalyzed: issues.length,
+        issuesWithReactions: issuesWithReactions.length,
+        preferences: preferences,
+        timestamp: new Date().toISOString()
+      }];
+
+jobs:
+  update-rlhf:
+    name: Update RLHF Data and System Prompt
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update RLHF files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node << 'EOF'
+          const fs = require('fs').promises;
+          const path = require('path');
+          const { updateSystemPrompt } = require('./lib/rlhf/prompt-updater.js');
+
+          const preferences = ${{ toJSON(on.script.outputs.preferences) }};
+          const timestamp = '${{ on.script.outputs.timestamp }}';
+
+          // Load existing rlhf.json
+          const rlhfPath = path.join(process.cwd(), 'data/rlhf.json');
+          let rlhfData = { history: [] };
+
+          try {
+            const existing = await fs.readFile(rlhfPath, 'utf8');
+            rlhfData = JSON.parse(existing);
+          } catch (err) {
+            console.log('No existing rlhf.json, creating new');
+          }
+
+          // Append new preferences
+          rlhfData.history.push({
+            timestamp: timestamp,
+            preferences: preferences
+          });
+
+          // Save rlhf.json
+          await fs.writeFile(rlhfPath, JSON.stringify(rlhfData, null, 2));
+          console.log('Updated rlhf.json');
+
+          // Update system-prompt.txt
+          const promptPath = path.join(process.cwd(), 'config/system-prompt.txt');
+          await updateSystemPrompt(promptPath, preferences);
+          console.log('Updated system-prompt.txt');
+          EOF
+
+      - name: Commit RLHF updates
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/rlhf.json config/system-prompt.txt
+          git diff --cached --quiet || git commit -m "RLHF update - $(date +%Y-%m-%d)"
+          git push

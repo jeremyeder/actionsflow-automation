@@ -1,0 +1,28 @@
+{
+  "top_signals": [],
+  "low_signals": [],
+  "categories": {
+    "other": {
+      "count": 16,
+      "total_score": 0,
+      "avg_score": 0.0
+    },
+    "open-source-tools": {
+      "count": 3,
+      "total_score": 0,
+      "avg_score": 0.0
+    },
+    "ai-platform-releases": {
+      "count": 5,
+      "total_score": 0,
+      "avg_score": 0.0
+    },
+    "research-papers": {
+      "count": 1,
+      "total_score": 0,
+      "avg_score": 0.0
+    }
+  },
+  "total_analyzed": 25,
+  "last_updated": "2025-12-21T14:01:01.653660+00:00"
+}

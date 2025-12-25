@@ -1,0 +1,79 @@
+name: People Watcher Daily
+on:
+  script:
+    config:
+      every: "0 6 * * *"  # 6 AM EST
+      timeZone: "America/New_York"
+    run: |
+      const path = require('path');
+      const { loadSources } = require(path.join(process.cwd(), 'lib/shared/config-loader.js'));
+      const { discoverContributors } = require(path.join(process.cwd(), 'lib/people-watcher/contributor-discovery.js'));
+      const { scoreCandidate, rankCandidates } = require(path.join(process.cwd(), 'lib/people-watcher/scoring.js'));
+
+      // Load target repositories
+      const sources = await loadSources();
+      const repos = sources.peopleWatcherRepos;
+
+      console.log(`Discovering contributors from ${repos.length} repositories`);
+
+      // Discover contributors
+      const contributors = await discoverContributors(repos);
+
+      // Score candidates
+      const scored = contributors.map(c => ({
+        ...c,
+        score: scoreCandidate(c)
+      }));
+
+      const ranked = rankCandidates(scored);
+
+      return [{
+        contributorsCount: contributors.length,
+        topCandidates: ranked.slice(0, 20),
+        timestamp: new Date().toISOString()
+      }];
+
+jobs:
+  update-candidates:
+    name: Update Candidates Database
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update candidates.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node << 'EOF'
+          const fs = require('fs').promises;
+          const path = require('path');
+          const { formatCandidateMarkdown } = require('./lib/people-watcher/scoring.js');
+
+          const topCandidates = ${{ toJSON(on.script.outputs.topCandidates) }};
+
+          // Format markdown
+          const markdown = formatCandidateMarkdown(topCandidates);
+
+          const candidatesPath = path.join(process.cwd(), 'data/candidates.md');
+          await fs.writeFile(candidatesPath, markdown);
+          console.log('Updated candidates.md');
+          EOF
+
+      - name: Commit candidates.md
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/candidates.md
+          git diff --cached --quiet || git commit -m "Update people watcher candidates - $(date +%Y-%m-%d)"
+          git push

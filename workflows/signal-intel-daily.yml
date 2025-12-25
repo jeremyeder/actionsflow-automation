@@ -1,0 +1,127 @@
+name: Signal Intelligence Daily
+on:
+  script:
+    config:
+      every: "0 8 * * *"
+      timeZone: "America/New_York"
+    run: |
+      const path = require('path');
+
+      // Import libraries
+      const { fetchHackerNews, fetchReddit, fetchGitHubReleases } = require(path.join(process.cwd(), 'lib/signal-intel/sources.js'));
+      const { loadSignals, saveSignals, isNewUrl, cleanOldSignals } = require(path.join(process.cwd(), 'lib/signal-intel/deduplication.js'));
+      const { analyzeSignals } = require(path.join(process.cwd(), 'lib/signal-intel/claude-analyzer.js'));
+      const { loadSources } = require(path.join(process.cwd(), 'lib/shared/config-loader.js'));
+
+      // Load configuration
+      const sources = await loadSources();
+
+      // Load existing signals
+      let signalsData = await loadSignals();
+
+      // Fetch new content from all sources
+      const hnStories = await fetchHackerNews();
+      const redditPosts = await fetchReddit(sources.subreddits);
+      const githubReleases = await fetchGitHubReleases(sources.githubRepos);
+
+      // Combine all signals
+      const allSignals = [...hnStories, ...redditPosts, ...githubReleases];
+
+      // Filter for new URLs only
+      const newSignals = allSignals.filter(s => isNewUrl(s.url, signalsData.signals));
+
+      console.log(`Found ${newSignals.length} new signals out of ${allSignals.length} total`);
+
+      if (newSignals.length === 0) {
+        console.log('No new signals, skipping workflow');
+        return [];
+      }
+
+      // Analyze with Claude to select top 5
+      const systemPromptPath = path.join(process.cwd(), 'config/system-prompt.txt');
+      const topSignals = await analyzeSignals(newSignals, systemPromptPath, 5);
+
+      // Add all new signals to state
+      for (const signal of newSignals) {
+        signalsData.signals.push({
+          url: signal.url,
+          title: signal.title,
+          source: signal.source,
+          timestamp: new Date().toISOString()
+        });
+      }
+
+      // Clean old signals (7-day TTL)
+      signalsData.signals = cleanOldSignals(signalsData.signals, 7);
+
+      // Save updated state
+      await saveSignals(signalsData);
+
+      return [{
+        topSignals: topSignals,
+        newSignalsCount: newSignals.length,
+        totalSignalsCount: allSignals.length,
+        timestamp: new Date().toISOString()
+      }];
+
+jobs:
+  create-issue:
+    name: Create GitHub Issue with Top Signals
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create GitHub issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          node << 'EOF'
+          const { createLabeledIssue, postComment } = require('./lib/signal-intel/github-utils.js');
+
+          const topSignals = ${{ toJSON(on.script.outputs.topSignals) }};
+          const newCount = '${{ on.script.outputs.newSignalsCount }}';
+          const totalCount = '${{ on.script.outputs.totalSignalsCount }}';
+
+          // Create main issue
+          const issueTitle = `Signal Intelligence - ${new Date().toLocaleDateString()}`;
+          const issueBody = `## Executive Summary\n\nAnalyzed ${totalCount} signals from HackerNews, Reddit, and GitHub.\n\nFound ${newCount} new signals. Claude selected the top 5 most relevant:\n\n### Top 5 Signals\n\n${topSignals.map((s, i) => `${i+1}. ${s.title} (${s.source})`).join('\n')}\n\n---\n\n*See individual comments below for detailed analysis of each signal.*\n\n*React with 👍 to signals you find valuable or 👎 to signals you want to see less of. Your reactions train the RLHF system to improve future selections.*`;
+
+          const issue = await createLabeledIssue(
+            'jeremyeder',
+            'signal-intel',
+            issueTitle,
+            issueBody,
+            ['signal-intelligence', 'automated']
+          );
+
+          console.log(`Created issue #${issue.number}: ${issue.html_url}`);
+
+          // Post 5 separate comments (one per signal)
+          for (let i = 0; i < topSignals.length; i++) {
+            const signal = topSignals[i];
+            const commentBody = `## Signal ${i+1}: ${signal.title}\n\n**Source:** ${signal.source}\n\n**URL:** ${signal.url}\n\n**Score:** ${signal.score || 'N/A'}\n\n---\n\n${signal.analysis || 'No analysis available'}`;
+
+            await postComment('jeremyeder', 'signal-intel', issue.number, commentBody);
+            console.log(`Posted comment ${i+1}/5`);
+          }
+          EOF
+
+      - name: Commit updated signals.json
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/signals.json
+          git diff --cached --quiet || git commit -m "Update signals.json - $(date +%Y-%m-%d)"
+          git push

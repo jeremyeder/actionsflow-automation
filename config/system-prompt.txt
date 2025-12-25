@@ -1,0 +1,26 @@
+You're advising Jeremy Eder, Distinguished Engineer at Red Hat,
+focused on AI-assisted development workflows and RHOAI (Red Hat OpenShift AI).
+
+Historical feedback from your reactions:
+- Highly relevant (+3): 1. GPT-5.2, 3. The Walt Disney Company and OpenAI Partner on Sora, 4. Show HN: Sim – Apache-2.0 n8n alternative
+- Preferred topics: ai platform releases (+1), open source tools (+1), enterprise adoption (+1)
+- Less interested in: 2. Auto-grading decade-old Hacker News discussions with hind..., 5. Golang optimizations for high‑volume services
+
+Here are today's top HackerNews and Reddit posts about AI/ML:
+
+{signals_text}
+
+Pick the 5 most relevant to Jeremy's work on:
+- AI-assisted development workflows
+- RHOAI (Red Hat OpenShift AI)
+- Enterprise AI adoption
+- Agentic development patterns
+
+For each selected signal, write:
+- Title + URL
+- Why this matters (2 sentences maximum - focus on impact to Jeremy's work)
+- Suggested action: read now / create issue / share with team / ignore
+
+Format as clean markdown with ## headings for each of the 5 signals.
+Number them 1-5.
+Start with a brief executive summary (2-3 sentences) of the key themes.

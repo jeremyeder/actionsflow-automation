@@ -1,0 +1,1042 @@
+{
+  "https://fil-c.org/seccomp": {
+    "seen_at": "2025-12-14T13:11:47.614216+00:00",
+    "title": "Linux Sandboxes and Fil-C"
+  },
+  "https://alavi.me/blog/e-ink-tablet-as-monitor-linux/": {
+    "seen_at": "2025-12-14T13:11:47.614230+00:00",
+    "title": "Using e-ink tablet as monitor for Linux"
+  },
+  "https://susam.net/fed-24-years-of-posts-to-markov-model.html": {
+    "seen_at": "2025-12-14T13:11:47.614235+00:00",
+    "title": "I fed 24 years of my blog posts to a Markov model"
+  },
+  "https://dagger.io/": {
+    "seen_at": "2025-12-14T13:11:47.614239+00:00",
+    "title": "Dagger: Define software delivery workflows and dev environments"
+  },
+  "https://chisophugis.github.io/2025/12/08/compiler-engineering-in-practice-part-1-what-is-a-compiler.html": {
+    "seen_at": "2025-12-14T13:11:47.614243+00:00",
+    "title": "Compiler Engineering in Practice"
+  },
+  "https://sandyuraz.com/blogs/bourdain/": {
+    "seen_at": "2025-12-14T13:11:47.614247+00:00",
+    "title": "Recovering Anthony Bourdain's Li.st's"
+  },
+  "https://en.wikipedia.org/wiki/Cat_gap": {
+    "seen_at": "2025-12-14T13:11:47.614250+00:00",
+    "title": "Cat Gap"
+  },
+  "https://blog.tymscar.com/posts/gleamaoc2025/": {
+    "seen_at": "2025-12-14T13:11:47.614254+00:00",
+    "title": "I tried Gleam for Advent of Code"
+  },
+  "https://github.com/leanprover-community/mathlib4": {
+    "seen_at": "2025-12-14T13:11:47.614258+00:00",
+    "title": "Lean theorem prover mathlib"
+  },
+  "https://www.jsoftware.com/ioj/ioj.htm": {
+    "seen_at": "2025-12-14T13:11:47.614262+00:00",
+    "title": "An Implementation of J (1992)"
+  },
+  "https://nullprogram.com/blog/2025/12/12/": {
+    "seen_at": "2025-12-14T13:11:47.614511+00:00",
+    "title": "Closures as Win32 Window Procedures"
+  },
+  "https://github.com/loadingalias/cargo-rail": {
+    "seen_at": "2025-12-14T13:11:47.614516+00:00",
+    "title": "Show HN: Cargo-rail: graph-aware monorepo tooling for Rust; 11 deps"
+  },
+  "https://james.brooks.page/blog/getting-into-public-speaking": {
+    "seen_at": "2025-12-14T13:11:47.614520+00:00",
+    "title": "Getting into Public Speaking"
+  },
+  "https://subject.space/projects/no-tifier/": {
+    "seen_at": "2025-12-14T13:11:47.614523+00:00",
+    "title": "No-Tifier (2017)"
+  },
+  "https://blog.appsignal.com/2025/12/10/create-a-markdown-editor-in-ruby-on-rails.html": {
+    "seen_at": "2025-12-14T13:11:47.614527+00:00",
+    "title": "Create a Markdown Editor in Ruby on Rails"
+  },
+  "https://1393.xyz/writing/if-a-meta-ai-model-can-read-a-brain-wide-signal-why-wouldnt-the-brain": {
+    "seen_at": "2025-12-14T13:11:47.614531+00:00",
+    "title": "If a Meta AI model can read a brain-wide signal, why wouldn't the brain?"
+  },
+  "https://www.wired.com/2014/04/mst3k-oral-history/": {
+    "seen_at": "2025-12-14T13:11:47.614535+00:00",
+    "title": "Mystery Science Theater 3000: The Definitive Oral History of a TV Masterpiece"
+  },
+  "https://simonwillison.net/2025/Dec/10/html-tools/": {
+    "seen_at": "2025-12-14T13:11:47.614538+00:00",
+    "title": "Useful patterns for building HTML tools"
+  },
+  "https://technicshistory.com/2025/12/13/the-rise-of-computer-games-part-i-adventure/": {
+    "seen_at": "2025-12-14T13:11:47.614542+00:00",
+    "title": "The Rise of Computer Games, Part I: Adventure"
+  },
+  "https://ipinfo.io/blog/vpn-location-mismatch-report": {
+    "seen_at": "2025-12-14T13:11:47.614546+00:00",
+    "title": "VPN location claims don't match real traffic exits"
+  },
+  "https://www.positive.news/society/flat-pack-washing-machine-spins-a-fairer-future/": {
+    "seen_at": "2025-12-14T13:11:47.614550+00:00",
+    "title": "An off-grid, flat-packable washing machine"
+  },
+  "https://antonz.org/accepted/runtime-secret/": {
+    "seen_at": "2025-12-14T13:11:47.614553+00:00",
+    "title": "Go Proposal: Secret Mode"
+  },
+  "https://www.sanity.io/blog/you-should-never-build-a-cms": {
+    "seen_at": "2025-12-14T13:11:47.614557+00:00",
+    "title": "\u201cYou should never build a CMS\u201d"
+  },
+  "https://www.elizium.nu/scripts/lemmings/index.php": {
+    "seen_at": "2025-12-14T13:11:47.614561+00:00",
+    "title": "Dhtml Lemmings (2004)"
+  },
+  "https://news.ycombinator.com/item?id=46255285": {
+    "seen_at": "2025-12-14T13:11:47.614564+00:00",
+    "title": "Ask HN: How can I get better at using AI for programming?"
+  },
+  "https://www.hcn.org/issues/57-11/heavy-metal-is-healing-teens-on-the-blackfeet-nation/": {
+    "seen_at": "2025-12-14T13:11:47.614568+00:00",
+    "title": "Heavy metal is healing teens on the Blackfeet Nation"
+  },
+  "https://jmmv.dev/2025/12/from-azure-functions-to-freebsd.html": {
+    "seen_at": "2025-12-14T13:11:47.614571+00:00",
+    "title": "From Azure Functions to FreeBSD"
+  },
+  "https://wiki.bbchallenge.org/wiki/Cryptids": {
+    "seen_at": "2025-12-14T13:11:47.614575+00:00",
+    "title": "Cryptids"
+  },
+  "https://hypirion.com/musings/use-python-for-scripting": {
+    "seen_at": "2025-12-14T13:11:47.614578+00:00",
+    "title": "Using Python for Scripting"
+  },
+  "https://aella.substack.com/p/bye-mom": {
+    "seen_at": "2025-12-14T13:11:47.614581+00:00",
+    "title": "Bye, Mom"
+  },
+  "https://thenewstack.io/adafruit-arduinos-rules-are-incompatible-with-open-source/": {
+    "seen_at": "2025-12-15T13:18:05.706144+00:00",
+    "title": "Adafruit: Arduino\u2019s Rules Are \u2018Incompatible With Open Source\u2019"
+  },
+  "https://news.bloomberglaw.com/bankruptcy-law/robot-vacuum-roomba-maker-files-for-bankruptcy-after-35-years": {
+    "seen_at": "2025-12-15T13:18:05.706158+00:00",
+    "title": "Roomba maker goes bankrupt, Chinese owner emerges"
+  },
+  "http://viznut.fi/unscii/": {
+    "seen_at": "2025-12-15T13:18:05.706163+00:00",
+    "title": "Unscii"
+  },
+  "https://arborium.bearcove.eu/": {
+    "seen_at": "2025-12-15T13:18:05.706167+00:00",
+    "title": "Arborium: Tree-sitter code highlighting with Native and WASM targets"
+  },
+  "https://news.ycombinator.com/item?id=46264491": {
+    "seen_at": "2025-12-15T13:18:05.706171+00:00",
+    "title": "Ask HN: What Are You Working On? (December 2025)"
+  },
+  "https://english.elpais.com/technology/2025-11-30/if-ai-replaces-workers-should-it-also-pay-taxes.html": {
+    "seen_at": "2025-12-15T13:18:05.706175+00:00",
+    "title": "If AI replaces workers, should it also pay taxes?"
+  },
+  "https://londonist.com/london/art-and-photography/invader-where-to-spot-the-8-bit-street-art-in-london": {
+    "seen_at": "2025-12-15T13:18:05.706179+00:00",
+    "title": "Invader: Where to Spot the 8-Bit Street Art in London"
+  },
+  "https://exclav.es/2025/08/03/dinacon-2025-passive-acoustic-listening/": {
+    "seen_at": "2025-12-15T13:18:05.706184+00:00",
+    "title": "$5 whale listening hydrophone making workshop"
+  },
+  "https://andyatkinson.com/avoid-uuid-version-4-primary-keys": {
+    "seen_at": "2025-12-15T13:18:05.706188+00:00",
+    "title": "Avoid UUIDv4 Primary Keys"
+  },
+  "https://ampsortation.com/articles/largest-us-recycling-project-spsa": {
+    "seen_at": "2025-12-15T13:18:05.706192+00:00",
+    "title": "Largest U.S. Recycling Project to Extend Landfill Life for Virginia Residents"
+  },
+  "https://www.hollywoodreporter.com/movies/movie-news/rob-reiner-dead-harry-met-sally-princess-bride-all-in-family-1236450387/": {
+    "seen_at": "2025-12-15T13:18:05.706196+00:00",
+    "title": "Rob Reiner has died"
+  },
+  "https://martinalderson.com/posts/ai-agents-are-starting-to-eat-saas/": {
+    "seen_at": "2025-12-15T13:18:05.706199+00:00",
+    "title": "AI agents are starting to eat SaaS"
+  },
+  "http://floggingbabel.blogspot.com/2025/12/john-varley-1947-2025.html": {
+    "seen_at": "2025-12-15T13:18:05.706204+00:00",
+    "title": "John Varley has died"
+  },
+  "https://calteches.library.caltech.edu/46/2/LatinAmerica.htm": {
+    "seen_at": "2025-12-15T13:18:05.706207+00:00",
+    "title": "The Problem of Teaching Physics in Latin America (1963)"
+  },
+  "https://pragprog.com/titles/aodjs/debugging-typescript-applications/": {
+    "seen_at": "2025-12-15T13:18:05.706211+00:00",
+    "title": "Show HN: I wrote a book \u2013 Debugging TypeScript Applications (in beta)"
+  },
+  "https://github.com/pretzelhammer/rust-blog/blob/master/posts/common-rust-lifetime-misconceptions.md": {
+    "seen_at": "2025-12-15T13:18:05.706215+00:00",
+    "title": "Common Rust Lifetime Misconceptions"
+  },
+  "https://borretti.me/article/hashcards-plain-text-spaced-repetition": {
+    "seen_at": "2025-12-15T13:18:05.706218+00:00",
+    "title": "Hashcards: A plain-text spaced repetition system"
+  },
+  "https://www.capros.org/": {
+    "seen_at": "2025-12-15T13:18:05.706222+00:00",
+    "title": "CapROS: Capability-Based Reliable Operating System"
+  },
+  "https://culi.bearblog.dev/jsdoc-is-typescript/": {
+    "seen_at": "2025-12-15T13:18:05.706226+00:00",
+    "title": "JSDoc is TypeScript"
+  },
+  "https://marcusolang.substack.com/p/im-kenyan-i-dont-write-like-chatgpt": {
+    "seen_at": "2025-12-15T13:18:05.706229+00:00",
+    "title": "I'm Kenyan. I Don't Write Like ChatGPT. ChatGPT Writes Like Me"
+  },
+  "https://www.nngroup.com/articles/javaring-wearable-computer/": {
+    "seen_at": "2025-12-15T13:18:05.706233+00:00",
+    "title": "The Java Ring: A Wearable Computer (1998)"
+  },
+  "https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/": {
+    "seen_at": "2025-12-15T13:18:05.706237+00:00",
+    "title": "A trip through the Graphics Pipeline (2011)"
+  },
+  "https://apnews.com/article/brazil-rio-talipot-palm-flamengo-park-dcfb1ce237af7a10ab72205fc9bbdc02": {
+    "seen_at": "2025-12-15T13:18:05.706240+00:00",
+    "title": "Rio de Janeiro's talipot palm trees bloom for the first and only time"
+  },
+  "https://www.abortretry.fail/p/the-history-of-xerox": {
+    "seen_at": "2025-12-15T13:18:05.706244+00:00",
+    "title": "The History of Xerox"
+  },
+  "https://readsomethingwonderful.com/": {
+    "seen_at": "2025-12-15T13:18:05.706247+00:00",
+    "title": "Read Something Wonderful"
+  },
+  "https://status.claude.com/incidents/9g6qpr72ttbr": {
+    "seen_at": "2025-12-15T13:18:05.706251+00:00",
+    "title": "Elevated errors across many models"
+  },
+  "https://www.bloodinthemachine.com/p/i-was-forced-to-use-ai-until-the": {
+    "seen_at": "2025-12-15T13:18:05.706254+00:00",
+    "title": "Copywriters reveal how AI has decimated their industry"
+  },
+  "https://drobinin.com/posts/the-whole-app-is-a-blob/": {
+    "seen_at": "2025-12-15T13:18:05.706258+00:00",
+    "title": "The Whole App is a Blob"
+  },
+  "https://thehonestsorcerer.substack.com/p/running-on-empty-copper": {
+    "seen_at": "2025-12-15T13:18:05.706262+00:00",
+    "title": "Running on Empty: Copper"
+  },
+  "https://apple.github.io/ml-sharp/": {
+    "seen_at": "2025-12-16T13:17:15.922628+00:00",
+    "title": "SHARP, an approach to photorealistic view synthesis from a single image"
+  },
+  "https://ashvardanian.com/posts/search-utf8/": {
+    "seen_at": "2025-12-16T13:17:15.922647+00:00",
+    "title": "Full Unicode Search at 50\u00d7 ICU Speed with AVX\u2011512"
+  },
+  "https://a2ui.org/": {
+    "seen_at": "2025-12-16T13:17:15.922653+00:00",
+    "title": "A2UI: A Protocol for Agent-Driven Interfaces"
+  },
+  "https://www.bbc.com/news/articles/ckgz318y8elo": {
+    "seen_at": "2025-12-16T13:17:15.922658+00:00",
+    "title": "Children with cancer scammed out of millions fundraised for their treatment"
+  },
+  "https://quill-os.org/": {
+    "seen_at": "2025-12-16T13:17:15.922662+00:00",
+    "title": "Quill OS: An open-source OS for Kobo's eReaders"
+  },
+  "https://github.com/scallyw4g/bonsai": {
+    "seen_at": "2025-12-16T13:17:15.922666+00:00",
+    "title": "Bonsai: A Voxel Engine, from scratch"
+  },
+  "https://blog.julik.nl/2025/12/a-trap-with-global-ids": {
+    "seen_at": "2025-12-16T13:17:15.922671+00:00",
+    "title": "Be Careful with GIDs in Rails"
+  },
+  "https://medium.com/@roman.f/a-linear-time-alternative-to-t-sne-for-dimensionality-reduction-and-fast-visualisation-5cd1a7219d6f": {
+    "seen_at": "2025-12-16T13:17:15.922675+00:00",
+    "title": "A linear-time alternative for Dimensionality Reduction and fast visualisation"
+  },
+  "https://terrytao.wordpress.com/2025/12/08/the-story-of-erdos-problem-126/": {
+    "seen_at": "2025-12-16T13:17:15.922679+00:00",
+    "title": "Erd\u0151s Problem #1026"
+  },
+  "https://highimpactengineering.substack.com/p/the-illusion-of-shared-understanding": {
+    "seen_at": "2025-12-16T13:17:15.922684+00:00",
+    "title": "Internal RFCs saved us months of wasted work"
+  },
+  "https://github.com/mantisfury/ArkhamMirror": {
+    "seen_at": "2025-12-16T13:17:15.922688+00:00",
+    "title": "ArkhamMirror: Airgapped investigation platform with CIA-style hypothesis testing"
+  },
+  "https://www.cursor.tue.nl/en/background/2025/december/week-2/should-we-fear-microsofts-monopoly": {
+    "seen_at": "2025-12-16T13:17:15.922693+00:00",
+    "title": "Should we fear Microsoft's monopoly?"
+  },
+  "https://www.psc.edu/hpn-ssh-home/": {
+    "seen_at": "2025-12-16T13:17:15.922697+00:00",
+    "title": "High Performance SSH/SCP"
+  },
+  "https://blog.owenlacey.dev/posts/are-you-the-one-is-free-money/": {
+    "seen_at": "2025-12-16T13:17:15.922701+00:00",
+    "title": "\u201cAre you the one?\u201d is free money"
+  },
+  "https://lowkpro.com/blog/creating-c-closures-from-lua-closures.html": {
+    "seen_at": "2025-12-16T13:17:15.922705+00:00",
+    "title": "Creating C closures from Lua closures"
+  },
+  "https://www.koi.ai/blog/urban-vpn-browser-extension-ai-conversations-data-collection": {
+    "seen_at": "2025-12-16T13:17:15.922709+00:00",
+    "title": "8M users' AI conversations sold for profit by \"privacy\" extensions"
+  },
+  "https://www.heise.de/en/news/VS-Code-deactivates-IntelliCode-in-favor-of-the-paid-Copilot-11115783.html": {
+    "seen_at": "2025-12-16T13:17:15.922714+00:00",
+    "title": "VS Code deactivates IntelliCode in favor of the paid Copilot"
+  },
+  "https://www.reuters.com/world/americas/jetblue-flight-averts-mid-air-collision-with-us-air-force-jet-2025-12-15/": {
+    "seen_at": "2025-12-16T13:17:15.922719+00:00",
+    "title": "JetBlue flight averts mid-air collision with US Air Force jet"
+  },
+  "https://rkblog.dev/posts/pc-hardware/pc-on-arm/x86_versus_arm_native_game/": {
+    "seen_at": "2025-12-16T13:17:15.922723+00:00",
+    "title": "Native vs. emulation: World of Warcraft game performance on Snapdragon X Elite"
+  },
+  "https://github.com/KaiPereira/Cheetah-MX4-Mini": {
+    "seen_at": "2025-12-16T13:17:15.922728+00:00",
+    "title": "Show HN: I designed my own 3D printer motherboard"
+  },
+  "https://milvus.io/blog/milvus-exceeds-40k-github-stars.md": {
+    "seen_at": "2025-12-16T13:17:15.922732+00:00",
+    "title": "7 Years, 2 Rebuilds, 40K+ Stars: Milvus Recap and Roadmap"
+  },
+  "https://andrewmccalip.com/space-datacenters": {
+    "seen_at": "2025-12-16T13:17:15.922736+00:00",
+    "title": "Economics of Orbital vs. Terrestrial Data Centers"
+  },
+  "https://nanohub.org/resources/43623/download/Essential_Semiconductor_Physics.pdf": {
+    "seen_at": "2025-12-16T13:17:15.922740+00:00",
+    "title": "Essential Semiconductor Physics [pdf]"
+  },
+  "https://hpjansson.org/chafa/": {
+    "seen_at": "2025-12-16T13:17:15.922744+00:00",
+    "title": "Chafa: Terminal Graphics for the 21st Century"
+  },
+  "https://expandingawareness.org/blog/the-appropriate-amount-of-effort-is-zero/": {
+    "seen_at": "2025-12-16T13:17:15.922748+00:00",
+    "title": "The appropriate amount of effort is zero"
+  },
+  "https://umbrel.com": {
+    "seen_at": "2025-12-16T13:17:15.922753+00:00",
+    "title": "Umbrel \u2013 Personal Cloud"
+  },
+  "https://www.thebignewsletter.com/p/secret-documents-show-pepsi-and-walmart": {
+    "seen_at": "2025-12-16T13:17:15.922758+00:00",
+    "title": "Secret Documents Show Pepsi and Walmart Colluded to Raise Food Prices"
+  },
+  "https://questdb.com/blog/async-profiler-kernel-bug/": {
+    "seen_at": "2025-12-16T13:17:15.922763+00:00",
+    "title": "A kernel bug froze my machine: Debugging an async-profiler deadlock"
+  },
+  "https://en.wikipedia.org/wiki/Mark_V._Shaney": {
+    "seen_at": "2025-12-16T13:17:15.922767+00:00",
+    "title": "Mark V Shaney"
+  },
+  "https://investor.coursera.com/news/news-details/2025/Coursera-to-Combine-with-Udemy-to-Empower-the-Global-Workforce-with-Skills-for-the-AI-Era/default.aspx": {
+    "seen_at": "2025-12-17T13:16:46.516736+00:00",
+    "title": "Coursera to combine with Udemy"
+  },
+  "https://martin.kleppmann.com/2025/12/08/ai-formal-verification.html": {
+    "seen_at": "2025-12-17T13:16:46.516752+00:00",
+    "title": "AI will make formal verification go mainstream"
+  },
+  "https://infosec.press/brunomiguel/is-mozilla-trying-hard-to-kill-itself": {
+    "seen_at": "2025-12-17T13:16:46.516757+00:00",
+    "title": "Is Mozilla trying hard to kill itself?"
+  },
+  "http://muratbuffalo.blogspot.com/2025/12/tla-modeling-tips.html": {
+    "seen_at": "2025-12-17T13:16:46.516761+00:00",
+    "title": "TLA+ Modeling Tips"
+  },
+  "https://alpr.watch/": {
+    "seen_at": "2025-12-17T13:16:46.516765+00:00",
+    "title": "alpr.watch"
+  },
+  "https://www.youtube.com/watch?v=nooPmXxO6K0": {
+    "seen_at": "2025-12-17T13:16:46.516770+00:00",
+    "title": "Modern SID chip substitutes [video]"
+  },
+  "https://www.sebastianaaltonen.com/blog/no-graphics-api": {
+    "seen_at": "2025-12-17T13:16:46.516773+00:00",
+    "title": "No Graphics API"
+  },
+  "https://astral.sh/blog/ty": {
+    "seen_at": "2025-12-17T13:16:46.517057+00:00",
+    "title": "Announcing the Beta release of ty"
+  },
+  "https://www.esquire.com/lifestyle/a69597294/santaland-bob-rutan/": {
+    "seen_at": "2025-12-17T13:16:46.517064+00:00",
+    "title": "Playing Santa changed Bob Rutan profoundly"
+  },
+  "https://msanroman.io/blog/ai-consumption-paradigm": {
+    "seen_at": "2025-12-17T13:16:46.517068+00:00",
+    "title": "AI's real superpower: consuming, not creating"
+  },
+  "https://www.waterfox.com/blog/no-ai-here-response-to-mozilla/": {
+    "seen_at": "2025-12-17T13:16:46.517072+00:00",
+    "title": "No AI* Here \u2013 A Response to Mozilla's Next Chapter"
+  },
+  "https://openai.com/index/new-chatgpt-images-is-here/": {
+    "seen_at": "2025-12-17T13:16:46.517076+00:00",
+    "title": "GPT Image 1.5"
+  },
+  "https://resources.github.com/actions/2026-pricing-changes-for-github-actions/": {
+    "seen_at": "2025-12-17T13:16:46.517080+00:00",
+    "title": "Pricing Changes for GitHub Actions"
+  },
+  "https://simonwillison.net/2025/Dec/15/porting-justhtml/": {
+    "seen_at": "2025-12-17T13:16:46.517083+00:00",
+    "title": "I ported JustHTML from Python to JavaScript with Codex CLI and GPT-5.2 in hours"
+  },
+  "https://mephistomail.site": {
+    "seen_at": "2025-12-17T13:16:46.517087+00:00",
+    "title": "Show HN: Mephisto \u2013 A RAM-only, ad-free disposable email PWA built with React"
+  },
+  "https://plasticsoldierreview.com/ShowFeature.aspx?id=27": {
+    "seen_at": "2025-12-17T13:16:46.517090+00:00",
+    "title": "Annual Production of 1/72 (22mm) scale plastic soldiers, 1958-2025"
+  },
+  "https://www.tum.de/en/news-and-events/all-news/press-releases/details/40-percent-of-mri-signals-do-not-correspond-to-actual-brain-activity": {
+    "seen_at": "2025-12-17T13:16:46.517094+00:00",
+    "title": "40 percent of fMRI signals do not correspond to actual brain activity"
+  },
+  "https://www.joanwestenberg.com/thin-desires-are-eating-your-life/": {
+    "seen_at": "2025-12-17T13:16:46.517098+00:00",
+    "title": "Thin desires are eating life"
+  },
+  "https://dfarq.homeip.net/va-linux-the-biggest-dotcom-ipo/": {
+    "seen_at": "2025-12-17T13:16:46.517102+00:00",
+    "title": "VA Linux: The biggest dotcom IPO"
+  },
+  "https://blog.mozilla.org/en/mozilla/leadership/mozillas-next-chapter-anthony-enzor-demeo-new-ceo/": {
+    "seen_at": "2025-12-17T13:16:46.517105+00:00",
+    "title": "Mozilla appoints new CEO Anthony Enzor-Demeo"
+  },
+  "https://www.simplychris.ai/droplets": {
+    "seen_at": "2025-12-17T13:16:46.517109+00:00",
+    "title": "Show HN: I built a WebMIDI sequencer to control my hardware synths"
+  },
+  "https://creative-art-points.vercel.app/": {
+    "seen_at": "2025-12-17T13:16:46.517112+00:00",
+    "title": "Living Particle System"
+  },
+  "https://github.com/p-org/P": {
+    "seen_at": "2025-12-17T13:16:46.517115+00:00",
+    "title": "P: Formal Modeling and Analysis of Distributed (Event-Driven) Systems"
+  },
+  "https://news.ycombinator.com/item?id=46233073": {
+    "seen_at": "2025-12-17T13:16:46.517119+00:00",
+    "title": "Ask HN: Has anyone been able to renew their IEEE this month?"
+  },
+  "https://bernsteinbear.com/isdt/": {
+    "seen_at": "2025-12-17T13:16:46.517122+00:00",
+    "title": "Introduction to Software Development Tooling (2024)"
+  },
+  "https://www.japantimes.co.jp/news/2025/08/21/japan/panel-hepburn-style-romanization/": {
+    "seen_at": "2025-12-17T13:16:46.517126+00:00",
+    "title": "Japan to revise romanization rules for first time in 70 years"
+  },
+  "https://www.npmjs.com/package/@ezetgalaxy/titan": {
+    "seen_at": "2025-12-17T13:16:46.517129+00:00",
+    "title": "Show HN: Titan \u2013 JavaScript-first framework that compiles into a Rust server"
+  },
+  "https://gamehistory.org/segachannel/": {
+    "seen_at": "2025-12-17T13:16:46.517133+00:00",
+    "title": "Sega Channel: VGHF Recovers over 100 Sega Channel ROMs (and More)"
+  },
+  "https://yaschamounk.substack.com/p/the-world-happiness-report-is-a-sham": {
+    "seen_at": "2025-12-17T13:16:46.517136+00:00",
+    "title": "The World Happiness Report is beset with methodological problems"
+  },
+  "https://e360.yale.edu/features/iran-water-drought-dams-qanats": {
+    "seen_at": "2025-12-18T13:16:20.075397+00:00",
+    "title": "After Ruining a Treasured Water Resource, Iran Is Drying Up"
+  },
+  "https://blog.jakobschwichtenberg.com/p/slowness-is-a-virtue": {
+    "seen_at": "2025-12-18T13:16:20.075412+00:00",
+    "title": "Slowness Is a Virtue"
+  },
+  "https://pricetimeline.com/news/189": {
+    "seen_at": "2025-12-18T13:16:20.075417+00:00",
+    "title": "GitHub Actions for Self-Hosted Runners Price Increase Postponed"
+  },
+  "https://combo.cc/posts/its-all-about-momentum-innit/": {
+    "seen_at": "2025-12-18T13:16:20.075421+00:00",
+    "title": "It's all about momentum"
+  },
+  "https://www.freebsd.org/security/advisories/FreeBSD-SA-25:12.rtsold.asc": {
+    "seen_at": "2025-12-18T13:16:20.075426+00:00",
+    "title": "RCE via ND6 Router Advertisements in FreeBSD"
+  },
+  "https://krebsonsecurity.com/2025/12/most-parked-domains-now-serving-malicious-content/": {
+    "seen_at": "2025-12-18T13:16:20.075430+00:00",
+    "title": "Most Parked Domains Now Serving Malicious Content"
+  },
+  "https://blog.google/products/gemini/gemini-3-flash/": {
+    "seen_at": "2025-12-18T13:16:20.075433+00:00",
+    "title": "Gemini 3 Flash: Frontier intelligence built for speed"
+  },
+  "https://www.egyptianhieroglyphs.net/egyptian-hieroglyphs/lesson-1/": {
+    "seen_at": "2025-12-18T13:16:20.075436+00:00",
+    "title": "Egyptian Hieroglyphs: Lesson 1"
+  },
+  "https://www.johndcook.com/blog/2019/02/21/what-is-an-elliptic-curve/": {
+    "seen_at": "2025-12-18T13:16:20.075441+00:00",
+    "title": "What is an elliptic curve? (2019)"
+  },
+  "https://matthematics.com/redoak/redoak.html": {
+    "seen_at": "2025-12-18T13:16:20.075444+00:00",
+    "title": "Online Textbook for Braid groups and knots and tangles"
+  },
+  "https://www.washingtonpost.com/nation/2025/12/17/ai-gun-school-detection/": {
+    "seen_at": "2025-12-18T13:16:20.075448+00:00",
+    "title": "A school locked down after AI flagged a gun. It was a clarinet"
+  },
+  "https://www.theargumentmag.com/p/how-getting-richer-made-teenagers": {
+    "seen_at": "2025-12-18T13:16:20.075452+00:00",
+    "title": "How getting richer made teenagers less free"
+  },
+  "https://blog.jakesaunders.dev/my-server-started-mining-monero-this-morning/": {
+    "seen_at": "2025-12-18T13:16:20.075456+00:00",
+    "title": "I got hacked: My Hetzner server started mining Monero"
+  },
+  "https://rovarma.com/articles/from-profiling-to-kernel-patch-the-journey-to-an-ebpf-performance-fix/": {
+    "seen_at": "2025-12-18T13:16:20.075460+00:00",
+    "title": "From profiling to kernel patch: the journey to an eBPF performance fix"
+  },
+  "https://jsomers.net/blog/speed-matters": {
+    "seen_at": "2025-12-18T13:16:20.075463+00:00",
+    "title": "Working quickly is more important than it seems (2015)"
+  },
+  "https://gizmodo.com/americas-dirtiest-carbon-polluters-mapped-to-ridiculous-precision-2000700924": {
+    "seen_at": "2025-12-18T13:16:20.075467+00:00",
+    "title": "America's Dirtiest Carbon Polluters, Mapped to Ridiculous Precision"
+  },
+  "https://gwern.net/doc/design/typography/tex/1981-knuth.pdf": {
+    "seen_at": "2025-12-18T13:16:20.075471+00:00",
+    "title": "Breaking Paragraphs into Lines [pdf] (1981)"
+  },
+  "https://www.speakeasy.com/blog/building-speakeasy-openapi-go-library": {
+    "seen_at": "2025-12-18T13:16:20.075475+00:00",
+    "title": "Building a High-Performance OpenAPI Parser in Go"
+  },
+  "https://projectfluent.org/": {
+    "seen_at": "2025-12-18T13:16:20.075478+00:00",
+    "title": "Fluent: A Localization System for Natural-Sounding Translations"
+  },
+  "https://news.ycombinator.com/item?id=46307973": {
+    "seen_at": "2025-12-18T13:16:20.075482+00:00",
+    "title": "Ask HN: Those making $500/month on side projects in 2025 \u2013 Show and tell"
+  },
+  "https://maintainable.fm/episodes/don-mackinnon-why-simplicity-beats-cleverness-in-software-design": {
+    "seen_at": "2025-12-18T13:16:20.075485+00:00",
+    "title": "Don MacKinnon: Why Simplicity Beats Cleverness in Software Design [audio]"
+  },
+  "https://www.finalroundai.com/blog/aws-ceo-ai-cannot-replace-junior-developers": {
+    "seen_at": "2025-12-18T13:16:20.075488+00:00",
+    "title": "AWS CEO says replacing junior devs with AI is 'one of the dumbest ideas'"
+  },
+  "https://www.jaist.ac.jp/english/whatsnew/press/2025/12/17-1.html": {
+    "seen_at": "2025-12-18T13:16:20.075492+00:00",
+    "title": "Gut bacteria from amphibians and reptiles achieve tumor elimination in mice"
+  },
+  "https://www.techradar.com/vpn/vpn-privacy-security/creating-apps-like-signal-or-whatsapp-could-be-hostile-activity-claims-uk-watchdog": {
+    "seen_at": "2025-12-18T13:16:20.075496+00:00",
+    "title": "Creating apps like Signal could be 'hostile activity' claims UK watchdog"
+  },
+  "https://www.theregister.com/2025/12/05/vizio_gpl_source_code_ruling/": {
+    "seen_at": "2025-12-18T13:16:20.075500+00:00",
+    "title": "Judge hints Vizio TV buyers may have rights to source code licensed under GPL"
+  },
+  "https://www.docker.com/blog/docker-hardened-images-for-every-developer/": {
+    "seen_at": "2025-12-18T13:16:20.075503+00:00",
+    "title": "A Safer Container Ecosystem with Docker: Free Docker Hardened Images"
+  },
+  "https://arstechnica.com/gaming/2025/12/jonathan-blow-has-spent-the-past-decade-designing-1400-puzzles-for-you/": {
+    "seen_at": "2025-12-18T13:16:20.075506+00:00",
+    "title": "Jonathan Blow has spent the past decade designing 1,400 puzzles for you"
+  },
+  "https://obsproject.com/blog/obs-studio-gets-a-new-renderer": {
+    "seen_at": "2025-12-18T13:16:20.075510+00:00",
+    "title": "OBS Studio Gets a New Renderer"
+  },
+  "https://mullvad.net/en/blog/announcing-gotatun-the-future-of-wireguard-at-mullvad-vpn": {
+    "seen_at": "2025-12-19T13:15:01.574208+00:00",
+    "title": "GotaTun -- Mullvad's WireGuard Implementation in Rust"
+  },
+  "https://www.kdpcommunity.com/s/article/New-eBook-Download-Options-for-Readers-Coming-in-2026?language=en_US": {
+    "seen_at": "2025-12-19T13:15:01.574224+00:00",
+    "title": "Amazon will allow ePub and PDF downloads for DRM-free eBooks"
+  },
+  "https://terriblesoftware.org/2025/12/19/the-strange-case-of-engineers-who-dismiss-ai/": {
+    "seen_at": "2025-12-19T13:15:01.574228+00:00",
+    "title": "Engineers who dismiss AI"
+  },
+  "https://github.com/moasq/production-saas-starter": {
+    "seen_at": "2025-12-19T13:15:01.574230+00:00",
+    "title": "Show HN: I open-sourced my Go and Next B2B SaaS Starter (deploy anywhere, MIT)"
+  },
+  "https://dl.acm.org/openaccess": {
+    "seen_at": "2025-12-19T13:15:01.574233+00:00",
+    "title": "Beginning January 2026, all ACM publications will be made open access"
+  },
+  "https://lorendb.dev/posts/getting-bitten-by-poor-naming-schemes/": {
+    "seen_at": "2025-12-19T13:15:01.574236+00:00",
+    "title": "Getting bitten by Intel's poor naming schemes"
+  },
+  "https://www.theverge.com/news/845400/texas-tv-makers-lawsuit-samsung-sony-lg-hisense-tcl-spying": {
+    "seen_at": "2025-12-19T13:15:01.574238+00:00",
+    "title": "Texas is suing all of the big TV makers for spying on what you watch"
+  },
+  "https://gist.github.com/hackermondev/5e2cdc32849405fff6b46957747a2d28": {
+    "seen_at": "2025-12-19T13:15:01.574241+00:00",
+    "title": "We pwned X, Vercel, Cursor, and Discord through a supply-chain attack"
+  },
+  "https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5": {
+    "seen_at": "2025-12-19T13:15:01.574243+00:00",
+    "title": "1.5 TB of VRAM on Mac Studio \u2013 RDMA over Thunderbolt 5"
+  },
+  "https://hatchet.run/blog/durable-execution": {
+    "seen_at": "2025-12-19T13:15:01.574245+00:00",
+    "title": "How to think about durable execution"
+  },
+  "https://github.com/DGoettlich/history-llms": {
+    "seen_at": "2025-12-19T13:15:01.574247+00:00",
+    "title": "History LLMs: Models trained exclusively on pre-1913 texts"
+  },
+  "https://sdiehl.github.io/zero-to-qed/01_introduction.html": {
+    "seen_at": "2025-12-19T13:15:01.574250+00:00",
+    "title": "From Zero to QED: An informal introduction to formality with Lean 4"
+  },
+  "https://axe-docs.pages.dev/features/generics/": {
+    "seen_at": "2025-12-19T13:15:01.574252+00:00",
+    "title": "Show HN: I implemented generics in my programming language"
+  },
+  "https://noclip.website/": {
+    "seen_at": "2025-12-19T13:15:01.574254+00:00",
+    "title": "Noclip.website \u2013 A digital museum of video game levels"
+  },
+  "https://github.com/envirobly/stepped": {
+    "seen_at": "2025-12-19T13:15:01.574256+00:00",
+    "title": "Show HN: Stepped Actions \u2013 distributed workflow orchestration for Rails"
+  },
+  "https://github.com/yarrick/pingfs": {
+    "seen_at": "2025-12-19T13:15:01.574259+00:00",
+    "title": "Pingfs: Stores your data in ICMP ping packets"
+  },
+  "https://openai.com/index/introducing-gpt-5-2-codex/": {
+    "seen_at": "2025-12-19T13:15:01.574261+00:00",
+    "title": "GPT-5.2-Codex"
+  },
+  "https://ngrok.com/blog/prompt-caching/": {
+    "seen_at": "2025-12-19T13:15:01.574263+00:00",
+    "title": "Prompt caching for cheaper LLM tokens"
+  },
+  "https://www.japantimes.co.jp/business/2025/12/18/tech/china-west-ai-chips/": {
+    "seen_at": "2025-12-19T13:15:01.574266+00:00",
+    "title": "How China built its \u2018Manhattan Project\u2019 to rival the West in AI chips"
+  },
+  "https://pckf.com/viewtopic.php?t=18248": {
+    "seen_at": "2025-12-19T13:15:01.574268+00:00",
+    "title": "Reconstructed Commander Keen 1-3 Source Code"
+  },
+  "https://design.google/library/google-sans-flex-font": {
+    "seen_at": "2025-12-19T13:15:01.574270+00:00",
+    "title": "Making Google Sans Flex"
+  },
+  "https://www.atredis.com/blog/2025/11/20/designing-a-passive-lidar-detection-sensor": {
+    "seen_at": "2025-12-19T13:15:01.574273+00:00",
+    "title": "Designing a Passive Lidar Detector Device"
+  },
+  "https://commercetxt.org/": {
+    "seen_at": "2025-12-19T13:15:01.574275+00:00",
+    "title": "Show HN: CommerceTXT \u2013 An open standard for AI shopping context (like llms.txt)"
+  },
+  "https://jgthms.com/picknplace.js/": {
+    "seen_at": "2025-12-19T13:15:01.574277+00:00",
+    "title": "Show HN: Picknplace.js, an alternative to drag-and-drop"
+  },
+  "https://kiro.dev/blog/property-based-testing-fixed-security-bug/": {
+    "seen_at": "2025-12-19T13:15:01.574280+00:00",
+    "title": "Property-Based Testing Caught a Security Bug I Never Would Have Found"
+  },
+  "https://docs.kernel.org/filesystems/smb/smbdirect.html": {
+    "seen_at": "2025-12-19T13:15:01.574282+00:00",
+    "title": "SMB Direct \u2013 SMB3 over RDMA"
+  },
+  "https://claude.com/blog/organization-skills-and-directory": {
+    "seen_at": "2025-12-19T13:15:01.574284+00:00",
+    "title": "Skills for organizations, partners, the ecosystem"
+  },
+  "https://github.com/vivienhenz24/fuzzy-canary": {
+    "seen_at": "2025-12-19T13:15:01.574286+00:00",
+    "title": "Show HN: Stop AI scrapers from hammering your self-hosted blog (using porn)"
+  },
+  "https://www.cs251.com/": {
+    "seen_at": "2025-12-19T13:15:01.574289+00:00",
+    "title": "Great ideas in theoretical computer science"
+  },
+  "https://mastodon.social/@firefoxwebdevs/115740500373677782": {
+    "seen_at": "2025-12-19T13:15:01.574291+00:00",
+    "title": "Firefox will have an option to disable all AI features"
+  },
+  "https://lists.nanog.org/archives/list/nanog@lists.nanog.org/message/ACADD3NKOG2QRWZ56OSNNG7UIEKKTZXL/": {
+    "seen_at": "2025-12-20T13:11:32.832419+00:00",
+    "title": "NTP at NIST Boulder Has Lost Power"
+  },
+  "https://brooker.co.za/blog/2025/12/15/database-for-ssd.html": {
+    "seen_at": "2025-12-20T13:11:32.832432+00:00",
+    "title": "What Does a Database for SSDs Look Like?"
+  },
+  "https://www.charlesproxy.com/": {
+    "seen_at": "2025-12-20T13:11:32.832436+00:00",
+    "title": "Charles Proxy"
+  },
+  "https://webkit.org/blog/17660/introducing-css-grid-lanes/": {
+    "seen_at": "2025-12-20T13:11:32.832439+00:00",
+    "title": "CSS Grid Lanes"
+  },
+  "https://github.com/magiblot/tvterm": {
+    "seen_at": "2025-12-20T13:11:32.832442+00:00",
+    "title": "A terminal emulator that runs in your terminal. Powered by Turbo Vision"
+  },
+  "https://developers.openai.com/codex/skills/": {
+    "seen_at": "2025-12-20T13:11:32.832444+00:00",
+    "title": "Skills Officially Comes to Codex"
+  },
+  "https://mistral.ai/news/mistral-ocr-3": {
+    "seen_at": "2025-12-20T13:11:32.832446+00:00",
+    "title": "Mistral OCR 3"
+  },
+  "https://www.sciencedaily.com/releases/2025/12/251213032617.htm": {
+    "seen_at": "2025-12-20T13:11:32.832449+00:00",
+    "title": "New Quantum Antenna Reveals a Hidden Terahertz World"
+  },
+  "https://garagehq.deuxfleurs.fr/": {
+    "seen_at": "2025-12-20T13:11:32.832451+00:00",
+    "title": "Garage \u2013 An S3 object store so reliable you can run it outside datacenters"
+  },
+  "https://map.contrails.org/": {
+    "seen_at": "2025-12-20T13:11:32.832453+00:00",
+    "title": "Contrails Map"
+  },
+  "https://www.theregister.com/2025/12/19/airbus_sovereign_cloud/": {
+    "seen_at": "2025-12-20T13:11:32.832456+00:00",
+    "title": "Airbus to migrate critical apps to a sovereign Euro cloud"
+  },
+  "https://github.com/joaquintides/semistable_vector": {
+    "seen_at": "2025-12-20T13:11:32.832458+00:00",
+    "title": "A proof of concept of a semistable C++ vector container"
+  },
+  "https://servury.com/blog/privacy-is-marketing-anonymity-is-architecture/": {
+    "seen_at": "2025-12-20T13:11:32.832460+00:00",
+    "title": "Privacy doesn't mean anything anymore, anonymity does"
+  },
+  "https://rushter.com/blog/go-and-hashmaps/": {
+    "seen_at": "2025-12-20T13:11:32.832462+00:00",
+    "title": "Hash tables in Go and advantage of self-hosted compilers"
+  },
+  "https://github.com/lovell/sharp": {
+    "seen_at": "2025-12-20T13:11:32.832464+00:00",
+    "title": "Sharp: High performance Node.js image processing/optimization"
+  },
+  "https://thompson2026.com/blog/deviancy-signal/": {
+    "seen_at": "2025-12-20T13:11:32.832466+00:00",
+    "title": "The Deviancy Signal: Having \"Nothing to Hide\" Is a Threat to Us All"
+  },
+  "https://www.evilsocket.net/2025/12/18/TP-Link-Tapo-C200-Hardcoded-Keys-Buffer-Overflows-and-Privacy-in-the-Era-of-AI-Assisted-Reverse-Engineering/": {
+    "seen_at": "2025-12-20T13:11:32.832469+00:00",
+    "title": "TP-Link Tapo C200: Hardcoded Keys, Buffer Overflows and Privacy"
+  },
+  "https://ewpratten.com/blog/fuzix-pi-pico": {
+    "seen_at": "2025-12-20T13:11:32.832471+00:00",
+    "title": "Fuzix on a Raspberry Pi Pico"
+  },
+  "https://cursor.com/blog/graphite": {
+    "seen_at": "2025-12-20T13:11:32.832473+00:00",
+    "title": "Graphite is joining Cursor"
+  },
+  "https://linusakesson.net/music/bolero/index.php": {
+    "seen_at": "2025-12-20T13:11:32.832476+00:00",
+    "title": "8-bit Bol\u00e9ro"
+  },
+  "https://karpathy.bearblog.dev/year-in-review-2025/": {
+    "seen_at": "2025-12-20T13:11:32.832478+00:00",
+    "title": "LLM Year in Review"
+  },
+  "https://carolinacloud.io/": {
+    "seen_at": "2025-12-20T13:11:32.832480+00:00",
+    "title": "Carolina Cloud \u2013 One third the cost of AWS for data science workloads"
+  },
+  "https://www.bamsoftware.com/hacks/zipbomb/": {
+    "seen_at": "2025-12-20T13:11:32.832483+00:00",
+    "title": "A better zip bomb (2019)"
+  },
+  "https://www.washingtonpost.com/nation/2025/12/18/brown-university-shooting-person-of-interest/": {
+    "seen_at": "2025-12-20T13:11:32.832485+00:00",
+    "title": "Brown/MIT shooting suspect found dead, officials say"
+  },
+  "https://pomb.us/build-your-own-react/": {
+    "seen_at": "2025-12-20T13:11:32.832487+00:00",
+    "title": "Build Your Own React"
+  },
+  "https://notgull.net/block-pattern/": {
+    "seen_at": "2025-12-20T13:11:32.832489+00:00",
+    "title": "Rust's Block Pattern"
+  },
+  "https://github.com/Lulzx/tinypdf": {
+    "seen_at": "2025-12-20T13:11:32.832492+00:00",
+    "title": "Show HN: TinyPDF \u2013 3kb pdf library (70x smaller than jsPDF)"
+  },
+  "https://www.newyorker.com/culture/annals-of-gastronomy/feast-your-eyes-on-japans-fake-food": {
+    "seen_at": "2025-12-20T13:11:32.832494+00:00",
+    "title": "Feast Your Eyes on Japan's Fake Food"
+  },
+  "https://gh-actions-lockfile.net": {
+    "seen_at": "2025-12-20T13:11:32.832496+00:00",
+    "title": "Gh-actions-lockfile: generate and verify lockfiles for GitHub Actions"
+  },
+  "https://github.com/anthropics/claude-code/releases/tag/v2.0.74": {
+    "seen_at": "2025-12-20T13:11:32.832499+00:00",
+    "title": "anthropics/claude-code v2.0.74: v2.0.74"
+  },
+  "https://github.com/anthropics/claude-code/releases/tag/v2.0.73": {
+    "seen_at": "2025-12-20T13:11:32.832500+00:00",
+    "title": "anthropics/claude-code v2.0.73: v2.0.73"
+  },
+  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.75.0": {
+    "seen_at": "2025-12-20T13:11:32.832503+00:00",
+    "title": "anthropics/anthropic-sdk-python v0.75.0: v0.75.0"
+  },
+  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.74.1": {
+    "seen_at": "2025-12-20T13:11:32.832505+00:00",
+    "title": "anthropics/anthropic-sdk-python v0.74.1: v0.74.1"
+  },
+  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.74.0": {
+    "seen_at": "2025-12-20T13:11:32.832507+00:00",
+    "title": "anthropics/anthropic-sdk-python v0.74.0: v0.74.0"
+  },
+  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.73.0": {
+    "seen_at": "2025-12-20T13:11:32.832509+00:00",
+    "title": "anthropics/anthropic-sdk-python v0.73.0: v0.73.0"
+  },
+  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.72.1": {
+    "seen_at": "2025-12-20T13:11:32.832511+00:00",
+    "title": "anthropics/anthropic-sdk-python v0.72.1: v0.72.1"
+  },
+  "https://github.com/pytorch/pytorch/releases/tag/v2.9.1": {
+    "seen_at": "2025-12-20T13:11:32.832513+00:00",
+    "title": "pytorch/pytorch v2.9.1: PyTorch 2.9.1 Release, bug fix release"
+  },
+  "https://github.com/pytorch/pytorch/releases/tag/v2.9.0": {
+    "seen_at": "2025-12-20T13:11:32.832514+00:00",
+    "title": "pytorch/pytorch v2.9.0: 2.9 Release Notes"
+  },
+  "https://github.com/pytorch/pytorch/releases/tag/v2.8.0": {
+    "seen_at": "2025-12-20T13:11:32.832516+00:00",
+    "title": "pytorch/pytorch v2.8.0: PyTorch 2.8.0 Release"
+  },
+  "https://github.com/pytorch/pytorch/releases/tag/v2.7.1": {
+    "seen_at": "2025-12-20T13:11:32.832518+00:00",
+    "title": "pytorch/pytorch v2.7.1: PyTorch 2.7.1 Release, bug fix release"
+  },
+  "https://github.com/pytorch/pytorch/releases/tag/v2.7.0": {
+    "seen_at": "2025-12-20T13:11:32.832520+00:00",
+    "title": "pytorch/pytorch v2.7.0: PyTorch 2.7.0 Release"
+  },
+  "https://github.com/ray-project/ray/releases/tag/ray-2.51.2": {
+    "seen_at": "2025-12-20T13:11:32.832522+00:00",
+    "title": "ray-project/ray ray-2.51.2: Ray-2.51.2"
+  },
+  "https://github.com/ray-project/ray/releases/tag/ray-2.52.1": {
+    "seen_at": "2025-12-20T13:11:32.832524+00:00",
+    "title": "ray-project/ray ray-2.52.1: Ray-2.52.1"
+  },
+  "https://github.com/ray-project/ray/releases/tag/ray-2.52.0": {
+    "seen_at": "2025-12-20T13:11:32.832526+00:00",
+    "title": "ray-project/ray ray-2.52.0: Ray-2.52.0"
+  },
+  "https://github.com/ray-project/ray/releases/tag/ray-2.51.1": {
+    "seen_at": "2025-12-20T13:11:32.832528+00:00",
+    "title": "ray-project/ray ray-2.51.1: Ray-2.51.1"
+  },
+  "https://github.com/ray-project/ray/releases/tag/ray-2.51.0": {
+    "seen_at": "2025-12-20T13:11:32.832529+00:00",
+    "title": "ray-project/ray ray-2.51.0: Ray-2.51.0"
+  },
+  "https://github.com/vllm-project/vllm/releases/tag/v0.13.0": {
+    "seen_at": "2025-12-20T13:11:32.832531+00:00",
+    "title": "vllm-project/vllm v0.13.0: v0.13.0"
+  },
+  "https://github.com/vllm-project/vllm/releases/tag/v0.12.0": {
+    "seen_at": "2025-12-20T13:11:32.832533+00:00",
+    "title": "vllm-project/vllm v0.12.0: v0.12.0"
+  },
+  "https://github.com/vllm-project/vllm/releases/tag/v0.11.2": {
+    "seen_at": "2025-12-20T13:11:32.832535+00:00",
+    "title": "vllm-project/vllm v0.11.2: v0.11.2"
+  },
+  "https://github.com/vllm-project/vllm/releases/tag/v0.11.1": {
+    "seen_at": "2025-12-20T13:11:32.832537+00:00",
+    "title": "vllm-project/vllm v0.11.1: v0.11.1"
+  },
+  "https://github.com/vllm-project/vllm/releases/tag/v0.11.0": {
+    "seen_at": "2025-12-20T13:11:32.832539+00:00",
+    "title": "vllm-project/vllm v0.11.0: v0.11.0"
+  },
+  "https://github.com/deepspeedai/DeepSpeed/releases/tag/v0.18.3": {
+    "seen_at": "2025-12-20T13:11:32.832540+00:00",
+    "title": "microsoft/DeepSpeed v0.18.3: v0.18.3 Patch Release"
+  },
+  "https://github.com/deepspeedai/DeepSpeed/releases/tag/v0.18.2": {
+    "seen_at": "2025-12-20T13:11:32.832542+00:00",
+    "title": "microsoft/DeepSpeed v0.18.2: v0.18.2 Patch Release"
+  },
+  "https://github.com/deepspeedai/DeepSpeed/releases/tag/v0.18.1": {
+    "seen_at": "2025-12-20T13:11:32.832544+00:00",
+    "title": "microsoft/DeepSpeed v0.18.1: v0.18.1 Patch Release"
+  },
+  "https://github.com/deepspeedai/DeepSpeed/releases/tag/v0.18.0": {
+    "seen_at": "2025-12-20T13:11:32.832546+00:00",
+    "title": "microsoft/DeepSpeed v0.18.0: v0.18.0"
+  },
+  "https://github.com/deepspeedai/DeepSpeed/releases/tag/v0.17.6": {
+    "seen_at": "2025-12-20T13:11:32.832548+00:00",
+    "title": "microsoft/DeepSpeed v0.17.6: v0.17.6 Patch Release"
+  },
+  "https://github.com/meta-pytorch/monarch/releases/tag/v0.1.0": {
+    "seen_at": "2025-12-20T13:11:32.832550+00:00",
+    "title": "meta-pytorch/monarch v0.1.0: 0.1.0"
+  },
+  "https://github.com/meta-pytorch/monarch/releases/tag/v0.0.0": {
+    "seen_at": "2025-12-20T13:11:32.832551+00:00",
+    "title": "meta-pytorch/monarch v0.0.0: v0.0.0"
+  },
+  "https://github.com/kubeflow/kubeflow/releases/tag/v1.10.0": {
+    "seen_at": "2025-12-20T13:11:32.832553+00:00",
+    "title": "kubeflow/kubeflow v1.10.0: v1.10.0"
+  },
+  "https://github.com/kubeflow/kubeflow/releases/tag/v1.9.2": {
+    "seen_at": "2025-12-20T13:11:32.832555+00:00",
+    "title": "kubeflow/kubeflow v1.9.2: v1.9.2"
+  },
+  "https://github.com/kubeflow/kubeflow/releases/tag/v1.9.1": {
+    "seen_at": "2025-12-20T13:11:32.832556+00:00",
+    "title": "kubeflow/kubeflow v1.9.1: v1.9.1"
+  },
+  "https://github.com/kubeflow/kubeflow/releases/tag/v1.9.0": {
+    "seen_at": "2025-12-20T13:11:32.832558+00:00",
+    "title": "kubeflow/kubeflow v1.9.0: v1.9.0"
+  },
+  "https://github.com/kubeflow/kubeflow/releases/tag/v1.8.0": {
+    "seen_at": "2025-12-20T13:11:32.832559+00:00",
+    "title": "kubeflow/kubeflow v1.8.0: v1.8.0"
+  },
+  "https://www.a1k0n.net/2025/12/19/tiny-tapeout-demo.html": {
+    "seen_at": "2025-12-20T20:09:42.252557+00:00",
+    "title": "Pure Silicon Demo Coding: No CPU, No Memory, Just 4k Gates"
+  },
+  "https://nuxx.net/blog/2025/12/20/openscad-is-kinda-neat/": {
+    "seen_at": "2025-12-20T20:09:42.252575+00:00",
+    "title": "OpenSCAD Is Kinda Neat"
+  },
+  "https://utcc.utoronto.ca/~cks/space/blog/programming/ErrorsShouldRequireFixing": {
+    "seen_at": "2025-12-20T20:09:42.252579+00:00",
+    "title": "Log level 'error' should mean that something needs to be fixed"
+  },
+  "https://annas-archive.li/blog/backing-up-spotify.html": {
+    "seen_at": "2025-12-20T20:09:42.252582+00:00",
+    "title": "Backing Up Spotify"
+  },
+  "https://www.jeffgeerling.com/blog/2025/big-gpus-dont-need-big-pcs": {
+    "seen_at": "2025-12-20T20:09:42.252584+00:00",
+    "title": "Big GPUs don't need big PCs"
+  },
+  "https://www.apalrd.net/posts/2023/network_ipv6/": {
+    "seen_at": "2025-12-20T20:09:42.252587+00:00",
+    "title": "I spent a week without IPv4"
+  },
+  "https://blog.jcz.dev/gemini-3-pro-vs-25-pro-in-pokemon-crystal": {
+    "seen_at": "2025-12-20T20:09:42.252589+00:00",
+    "title": "Gemini 3 Pro vs. 2.5 Pro in Pokemon Crystal"
+  },
+  "https://pierce.dev/notes/go-ahead-self-host-postgres#user-content-fn-1": {
+    "seen_at": "2025-12-20T20:09:42.252591+00:00",
+    "title": "Go ahead, self-host Postgres"
+  },
+  "https://hn-wrapped.kadoa.com?year=2025": {
+    "seen_at": "2025-12-20T20:09:42.252594+00:00",
+    "title": "Show HN: HN Wrapped 2025 - an LLM reviews your year on HN"
+  },
+  "https://github.com/ertugrulcetin/immersa": {
+    "seen_at": "2025-12-20T20:09:42.252597+00:00",
+    "title": "Immersa: Open-source Web-based 3D Presentation Tool"
+  },
+  "https://arxiv.org/abs/2512.10047": {
+    "seen_at": "2025-12-20T20:09:42.252599+00:00",
+    "title": "Detailed balance in large language model-driven agents"
+  },
+  "https://github.com/CrystallineCore/Biscuit": {
+    "seen_at": "2025-12-20T20:09:42.252602+00:00",
+    "title": "Biscuit is a specialized PostgreSQL index for fast pattern matching LIKE queries"
+  },
+  "https://thecritic.co.uk/ai-will-make-our-children-stupid/": {
+    "seen_at": "2025-12-20T20:09:42.252604+00:00",
+    "title": "AI will make our children stupid"
+  },
+  "https://www.nasa.gov/stem-content/x-59-3d-printing/": {
+    "seen_at": "2025-12-20T20:09:42.252607+00:00",
+    "title": "X-59 3D Printing"
+  },
+  "https://shkspr.mobi/blog/2025/12/why-do-people-leave-comments-on-openbenches/": {
+    "seen_at": "2025-12-20T20:09:42.252610+00:00",
+    "title": "Why do people leave comments on OpenBenches?"
+  },
+  "http://deater.net/weave/vmwprod/hgr_compress/": {
+    "seen_at": "2025-12-20T20:09:42.252614+00:00",
+    "title": "Maximizing Compression of Apple II Hi-Res Images"
+  },
+  "https://antirez.com/news/157": {
+    "seen_at": "2025-12-20T20:09:42.252616+00:00",
+    "title": "Reflections on AI at the End of 2025"
+  },
+  "https://www.ianvisits.co.uk/articles/a-train-sized-tunnel-is-now-carrying-electricity-under-south-london-86221/": {
+    "seen_at": "2025-12-20T20:09:42.252620+00:00",
+    "title": "A train-sized tunnel is now carrying electricity under South London"
+  },
+  "https://github.com/Sevii/agent-marketplace/blob/main/plugins/elevator-music/README.md": {
+    "seen_at": "2025-12-20T20:09:42.252622+00:00",
+    "title": "Show HN: Claude Code Plugin to play music when waiting on user input"
+  },
+  "https://matteocapucci.wordpress.com/2022/12/21/mathematicians-dont-care-about-foundations/": {
+    "seen_at": "2025-12-20T20:09:42.252624+00:00",
+    "title": "Mathematicians don't care about foundations"
+  },
+  "https://www.arduino.cc/product-uno-q/": {
+    "seen_at": "2025-12-20T20:09:42.252627+00:00",
+    "title": "Arduino UNO Q bridges high-performance computing with real-time control"
+  },
+  "https://github.com/ray-project/ray/releases/tag/ray-2.53.0": {
+    "seen_at": "2025-12-20T20:09:42.252633+00:00",
+    "title": "ray-project/ray ray-2.53.0: Ray-2.53.0"
+  }
+}

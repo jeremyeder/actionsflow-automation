@@ -62,6 +62,9 @@ jobs:
           TWILIO_FROM_PHONE: ${{ secrets.TWILIO_FROM_PHONE }}
           TWILIO_TO_PHONE: ${{ secrets.TWILIO_TO_PHONE }}
 
+          # Signal Intelligence
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
           # GitHub token (auto-provided)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build
@@ -82,6 +85,7 @@ jobs:
           TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
           TWILIO_FROM_PHONE: ${{ secrets.TWILIO_FROM_PHONE }}
           TWILIO_TO_PHONE: ${{ secrets.TWILIO_TO_PHONE }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm run build
