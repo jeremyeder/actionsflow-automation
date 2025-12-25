@@ -2,7 +2,7 @@ name: Signal Intelligence Daily
 on:
   script:
     config:
-      every: "0 8 * * *"
+      every: "*/15 * * * *"  # TESTING: Run every 15 min (change back to "0 8 * * *" after testing)
       timeZone: "America/New_York"
     run: |
       const path = require('path');
